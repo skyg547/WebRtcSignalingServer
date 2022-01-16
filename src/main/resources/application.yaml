@@ -1,0 +1,9 @@
+server:
+  port: 8090
+
+spring:
+ devtools:
+   add-properties: false
+
+ profiles:
+   active: local
