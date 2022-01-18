@@ -1,8 +1,13 @@
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class WebSocketConfiguration  {
+@EnableWebSocket
+public class WebSocketConfiguration {
 
-    private Long id;
+    @Override
+    public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+        registry.addHandler(new SocketHandler(), "/socket")
+                .setAllowedOrigins("*");
+    }
 
 }
