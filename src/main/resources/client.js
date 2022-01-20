@@ -72,3 +72,32 @@ peerConnection.ondatachannel = function (event) {
 
     dataChannel = event.channel;
 }
+
+const constraints = {
+    video : true,
+    audio : true
+
+};
+
+navigator.mediaDevices.getUserMedia(constraints).then(function (stream){/*use stream*/}).catch(function (error) {/*handle error */ })
+
+
+var constraints = {
+    video : {
+        frameRate : {
+            ideal : 10,
+            max : 15
+        },
+        width : 1280,
+        height : 720,
+        facingMode : "user"
+    }
+};
+
+peerConnection.addStream(stream);
+
+peerConnection.onaddstream = function(event) {
+    videoElement.srcObject = event.stream;
+
+};
+
