@@ -18,7 +18,9 @@ public class SocketHandler extends TextWebSocketHandler {
     @Override
     public void handleTextMessage(WebSocketSession session, TextMessage message) throws InterruptedException, IOException{
 
+        System.err.println( session.toString() + message.toString());
         for (WebSocketSession webSocketSession : sessions) {
+            System.out.println(webSocketSession);
             if (webSocketSession.isOpen() && !session.getId().equals(webSocketSession.getId())){
                 webSocketSession.sendMessage(message);
             }
@@ -30,7 +32,8 @@ public class SocketHandler extends TextWebSocketHandler {
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception{
         sessions.add(session);
-
+        System.out.println("--------------------- conncect");
+        System.out.println(session);
     }
 
 
