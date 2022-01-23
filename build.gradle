@@ -26,7 +26,10 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'org.springframework.boot:spring-boot-starter-websocket'
-
+    implementation 'org.springframework:spring-websocket'
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+    implementation 'io.socket:socket.io-client:2.0.1'
+    implementation 'com.corundumstudio.socketio:netty-socketio:1.7.19'
 }
 
 test {
