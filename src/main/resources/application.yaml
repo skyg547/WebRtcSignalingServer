@@ -12,7 +12,7 @@ spring:
 
 # netty-socketio configuration
 socketio:
-  host: 192.168.123.106
+  host: 127.0.0.1
   port: 8888
   # Set the maximum length of processing data per frame to prevent others from using large data to attack the server
   maxFramePayloadLength: 1048576
