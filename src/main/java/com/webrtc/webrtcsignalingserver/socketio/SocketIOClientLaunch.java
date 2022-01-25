@@ -1,4 +1,4 @@
-package com.webrtc.webrtcsignalingserver;
+package com.webrtc.webrtcsignalingserver.socketio;
 
 import io.socket.client.IO;
 import io.socket.client.Socket;

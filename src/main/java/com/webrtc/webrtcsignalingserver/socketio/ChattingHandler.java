@@ -1,4 +1,4 @@
-package com.webrtc.webrtcsignalingserver;
+package com.webrtc.webrtcsignalingserver.socketio;
 
 
 import lombok.extern.log4j.Log4j;

@@ -1,5 +1,6 @@
-package com.webrtc.webrtcsignalingserver;
+package com.webrtc.webrtcsignalingserver.websocket;
 
+import com.webrtc.webrtcsignalingserver.socketio.SocketHandler;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
