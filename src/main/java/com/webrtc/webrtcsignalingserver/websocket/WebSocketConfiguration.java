@@ -1,6 +1,5 @@
 package com.webrtc.webrtcsignalingserver.websocket;
 
-import com.webrtc.webrtcsignalingserver.socketio.SocketHandler;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
@@ -14,6 +13,8 @@ public class WebSocketConfiguration implements WebSocketConfigurer {
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         registry.addHandler(new SocketHandler(), "/socket")
                 .setAllowedOrigins("*");
+
+        registry.addHandler(new ChattingHandler(), "/chatting").setAllowedOrigins("*");
     }
 
 

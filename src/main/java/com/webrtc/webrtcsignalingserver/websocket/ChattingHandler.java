@@ -1,4 +1,4 @@
-package com.webrtc.webrtcsignalingserver.socketio;
+package com.webrtc.webrtcsignalingserver.websocket;
 
 
 import lombok.extern.log4j.Log4j;
@@ -22,16 +22,24 @@ public class ChattingHandler extends TextWebSocketHandler {
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
 
 //        log("#ChattingHandler , after ConnecttionEstablished");
+        System.err.println("connect");
+        sessions.add(session);
 
     }
 
     @Override
     protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
-        super.handleTextMessage(session, message);
+        System.err.println("message");
+
+        for(WebSocketSession s : sessions){
+            s.sendMessage(new TextMessage(session.getPrincipal().getName() +":" + message.getPayload()));
+        }
     }
 
     @Override
     public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
-        super.afterConnectionClosed(session, status);
+        System.err.println("close");
+        sessions.remove(session);
+
     }
 }
