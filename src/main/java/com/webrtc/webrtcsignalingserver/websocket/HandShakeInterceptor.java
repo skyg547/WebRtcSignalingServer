@@ -1,4 +1,4 @@
-package com.webrtc.webrtcsignalingserver;
+package com.webrtc.webrtcsignalingserver.websocket;
 
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;

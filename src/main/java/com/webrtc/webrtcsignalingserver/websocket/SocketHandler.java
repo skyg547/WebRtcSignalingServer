@@ -1,4 +1,4 @@
-package com.webrtc.webrtcsignalingserver.socketio;
+package com.webrtc.webrtcsignalingserver.websocket;
 
 
 import org.springframework.stereotype.Component;
