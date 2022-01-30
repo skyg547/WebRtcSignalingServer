@@ -13,6 +13,25 @@
 </head>
 <body>
 <h1>Demo</h1>
-<div class="container"></div>
+<div class="container unauthenticated">
+    with github : <a href="/oauth2/authorization/github">click here</a>
+
+</div>
+
+<div class="container authenticated" style="display: none">
+
+  Logged In as : <span id = "user"></span>
+
+</div>
+
+<script>
+  $.get("/user", function (data){
+      $("#user").html(data.name);
+      $(".unauthenticated").hide();
+      $(".authenticated").show();
+  });
+</script>
+
+
 </body>
 </html>
