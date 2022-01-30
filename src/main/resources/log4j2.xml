@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration status="INFO">
+    <Properties>
+        <property name="log4j.rootLogger" value="INFO, stdout"/>
+        <property name="LOG_PATTERN">%d{HH:mm:ss,SSSZ} [%t] %-5level %logger{36} - %msg%n</property>
+
+        <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+            <Console name="ConsoleLog" targer="SYSTEM_OUT">
+                <PatternLayout pattern="${LOG_PATTERN}" charset="UTF-8"/>
+            </Console>
+        </appender>
+
+        <loggers>
+            <root level="INFO">
+                <appender-ref ref="ConsoleLog"/>
+                <apperder-ref ref="FileLog"/>
+            </root>
+        </loggers>
+    </Properties>
+</configuration>
