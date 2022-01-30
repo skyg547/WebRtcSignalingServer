@@ -1,12 +1,32 @@
 server:
-  port: 8090
+  port: 8080
 
 spring:
- devtools:
-   add-properties: false
+  devtools:
+    add-properties: false
 
- profiles:
-   active: local
+    livereload:
+      enabled: true
+  profiles:
+    active: local
+    include:
+      - secret
+
+
+  thymeleaf:
+    view-names: thymeleaf/*
+    prefix: classpath:templates/
+    suffix: .html
+    cache: false
+    check-teplate-location: true
+
+
+logging:
+  level:
+    "[root]": debug
+
+
+
 
 
 
