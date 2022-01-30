@@ -30,6 +30,15 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind'
     implementation 'io.socket:socket.io-client:2.0.1'
     implementation 'com.corundumstudio.socketio:netty-socketio:1.7.19'
+    implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    implementation 'javax.servlet:jstl'
+    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+    implementation 'org.webjars:jquery:3.4.1'
+    implementation 'org.webjars:bootstrap:4.3.1'
+    implementation 'org.webjars:webjars-locator-core'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+
 }
 
 test {
